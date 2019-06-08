@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="#">
+    <img src="assets/users/joe.jpg" width="30" height="30" class="user-avatar d-inline-block align-top" alt="">
+    Project 1
+  </a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+    <ul class="navbar-nav mr-auto justify-content-center w-100">
+      <li class="nav-item mr-4">
+        <button routerLink="/contentplan" class="text-white btn btn-info btn-sm btn-block nav-link">
+          <i class="fas fa-calendar-alt mr-2"></i>
+          Content Plan
+        </button>
+      </li>
+      <li class="nav-item mr-4">
+        <button routerLink="/contentplan/analytics" class="text-white btn btn-info btn-sm btn-block nav-link">
+          <i class="fas fa-chart-pie mr-2"></i>
+          Analytics
+        </button>
+      </li>
+      <li class="nav-item mr-4">
+        <button routerLink="/contentplan/status"  class="text-white btn btn-info btn-sm btn-block nav-link">
+          <i class="fas fa-tasks mr-2"></i>
+          Status
+        </button>
+      </li>
+    </ul>
+
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

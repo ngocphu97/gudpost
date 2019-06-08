@@ -1,0 +1,14 @@
+.card {
+  width: 12rem;
+  height: 12rem;
+
+  .icon {
+    font-size: 4rem;
+    color: Dodgerblue;
+  }
+
+  &:hover {
+      opacity: 0.5;
+      cursor: pointer;
+  }
+}

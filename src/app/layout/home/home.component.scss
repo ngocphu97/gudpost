@@ -1,0 +1,21 @@
+.user-avatar {
+  width: 110px;
+}
+
+.user-name {
+  letter-spacing: 9px;
+}
+
+.fanpage-thumbnail {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+tr:hover {
+    cursor: pointer;
+}
+
+td {
+  vertical-align: baseline !important;
+}
