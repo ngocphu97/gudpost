@@ -4,10 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import * as fromLayout from './layout';
 
 const routes: Routes = [
-  {
-    path: 'login',
-    component: fromLayout.LoginPageComponent
-  },
+  { path: 'wellcome', component: fromLayout.WellcomePageComponent },
   {
     path: '',
     component: fromLayout.DashboardComponent,
@@ -19,11 +16,11 @@ const routes: Routes = [
       {
         path: 'projects',
         component: fromLayout.ProjectComponent,
-       },
+      },
       {
         path: 'projects/addproject',
         component: fromLayout.AddprojectComponent,
-       },
+      },
       {
         path: 'contentplan',
         component: fromLayout.ContentPlanComponent,
@@ -41,6 +38,10 @@ const routes: Routes = [
             component: fromLayout.StatusComponent
           }
         ]
+      },
+      {
+        path: 'login',
+        component: fromLayout.LoginPageComponent
       },
     ]
   },

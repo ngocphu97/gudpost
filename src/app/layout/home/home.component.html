@@ -15,11 +15,11 @@
 
 <div class="jumbotron jumbotron-fluid p-0">
   <div class="container d-flex justify-content-around">
-    
+
     <div class="item d-flex align-items-center">
       <h4 class="display-4">Daily Status</h4>
     </div>
-    
+
     <div class="item">
       <h3 class="display-3">10</h3>
       <p class="lead">Post Schedule</p>
@@ -43,11 +43,11 @@
       <div class="card-body">
         <h5 class="card-title">Top Projects</h5>
         <div class="card-text">
-          <table class="table table-hover">
+          <table id="accordionExample" class="table table-hover accordion">
             <thead>
               <tr>
                 <th scope="col">Thumbnail</th>
-                <th scope="col">FB Fangage</th>
+                <th scope="col">Project</th>
                 <th scope="col">Total Fans</th>
                 <th scope="col">Fan Increase</th>
                 <th scope="col">Post Sent</th>
@@ -55,80 +55,74 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
+              <tr tabindex="0" data-toggle="collapse" href="#collapseProject1" aria-expanded="true"
+                aria-controls="collapseProject1">
                 <td>
                   <img class="img-thumbnail fanpage-thumbnail"
                     src="https://www.clipartmax.com/png/middle/60-605767_whats-the-hold-up-a-guide-on-processing-time-confused-person-cartoon.png"
                     alt="">
                 </td>
                 <td>
-                  Page 1
+                  Project 1
                 </td>
                 <td>1000</td>
                 <td>1000</td>
                 <td>1000</td>
                 <td>1000</td>
               </tr>
-              <tr>
+              <tr routerLink="/contentplan"  data-parent="#accordionExample" class="collapse" id="collapseProject1">
+                <td class="project-detail-row" colspan="1"></td>
+                <td class="project-detail-row">Page 1</td>
+                <td class="project-detail-row">500</td>
+                <td class="project-detail-row">500</td>
+                <td class="project-detail-row">500</td>
+                <td class="project-detail-row">500</td>
+              </tr>
+              <tr routerLink="/contentplan"  data-parent="#accordionExample" class="collapse" id="collapseProject1">
+                <td class="project-detail-row" colspan="1"></td>
+                <td class="project-detail-row">Page 2</td>
+                <td class="project-detail-row">500</td>
+                <td class="project-detail-row">500</td>
+                <td class="project-detail-row">500</td>
+                <td class="project-detail-row">500</td>
+              </tr>
+
+              <tr tabindex="0" data-toggle="collapse" href="#collapseProject2" aria-expanded="false"
+                aria-controls="collapseProject2">
                 <td>
                   <img class="img-thumbnail fanpage-thumbnail"
                     src="https://www.clipartmax.com/png/middle/60-605767_whats-the-hold-up-a-guide-on-processing-time-confused-person-cartoon.png"
                     alt="">
                 </td>
                 <td>
-                  Page 1
+                  Project 2
                 </td>
                 <td>1000</td>
                 <td>1000</td>
                 <td>1000</td>
                 <td>1000</td>
               </tr>
-              <tr>
-                <td>
-                  <img class="img-thumbnail fanpage-thumbnail"
-                    src="https://www.clipartmax.com/png/middle/60-605767_whats-the-hold-up-a-guide-on-processing-time-confused-person-cartoon.png"
-                    alt="">
-                </td>
-                <td>
-                  Page 1
-                </td>
-                <td>1000</td>
-                <td>1000</td>
-                <td>1000</td>
-                <td>1000</td>
+              <tr class="table-secondary"  data-parent="#accordionExample" routerLink="/contentplan" class="collapse" id="collapseProject2">
+                <td class="project-detail-row" colspan="1"></td>
+                <td class="project-detail-row">Page 3</td>
+                <td class="project-detail-row">500</td>
+                <td class="project-detail-row">500</td>
+                <td class="project-detail-row">500</td>
+                <td class="project-detail-row">500</td>
               </tr>
-              <tr>
-                <td>
-                  <img class="img-thumbnail fanpage-thumbnail"
-                    src="https://www.clipartmax.com/png/middle/60-605767_whats-the-hold-up-a-guide-on-processing-time-confused-person-cartoon.png"
-                    alt="">
-                </td>
-                <td>
-                  Page 1
-                </td>
-                <td>1000</td>
-                <td>1000</td>
-                <td>1000</td>
-                <td>1000</td>
+              <tr routerLink="/contentplan" data-parent="#accordionExample"  class="collapse" id="collapseProject2">
+                <td class="project-detail-row" colspan="1"></td>
+                <td class="project-detail-row">Page 4</td>
+                <td class="project-detail-row">500</td>
+                <td class="project-detail-row">500</td>
+                <td class="project-detail-row">500</td>
+                <td class="project-detail-row">500</td>
               </tr>
-              <tr>
-                <td>
-                  <img class="img-thumbnail fanpage-thumbnail"
-                    src="https://www.clipartmax.com/png/middle/60-605767_whats-the-hold-up-a-guide-on-processing-time-confused-person-cartoon.png"
-                    alt="">
-                </td>
-                <td>
-                  Page 1
-                </td>
-                <td>1000</td>
-                <td>1000</td>
-                <td>1000</td>
-                <td>1000</td>
-              </tr>
+
             </tbody>
           </table>
         </div>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <a routerLink="/projects" class="btn btn-primary">All project</a>
       </div>
     </div>
   </div>
