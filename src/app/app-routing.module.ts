@@ -22,6 +22,10 @@ const routes: Routes = [
         component: fromLayout.AddprojectComponent,
       },
       {
+        path: 'publish',
+        component: fromLayout.PublishnowComponent
+      },
+      {
         path: 'contentplan',
         component: fromLayout.ContentPlanComponent,
         children: [

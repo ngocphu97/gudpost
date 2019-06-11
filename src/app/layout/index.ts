@@ -10,6 +10,7 @@ import { StatusComponent } from './status/status.component';
 import { ProjectComponent } from './project/project.component';
 import { AddprojectComponent } from './addproject/addproject.component';
 import { WellcomePageComponent } from './wellcome-page/wellcome-page.component';
+import { PublishnowComponent } from './publishnow/publishnow.component';
 
 export const containers = [
     LoginPageComponent,
@@ -23,7 +24,8 @@ export const containers = [
     StatusComponent,
     ProjectComponent,
     AddprojectComponent,
-    WellcomePageComponent
+    WellcomePageComponent,
+    PublishnowComponent
 ];
 
 export {
@@ -38,5 +40,6 @@ export {
     StatusComponent,
     ProjectComponent,
     AddprojectComponent,
-    WellcomePageComponent
+    WellcomePageComponent,
+    PublishnowComponent
 };
