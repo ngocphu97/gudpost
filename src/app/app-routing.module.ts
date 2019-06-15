@@ -5,7 +5,10 @@ import * as fromLayout from './layout';
 
 const routes: Routes = [
   { path: 'wellcome', component: fromLayout.WellcomePageComponent },
-  { path: 'login', component: fromLayout.LoginPageComponent },
+  {
+    path: 'login',
+    loadChildren:  './auth/auth.module#AuthModule'
+  },
   {
     path: '',
     component: fromLayout.DashboardComponent,

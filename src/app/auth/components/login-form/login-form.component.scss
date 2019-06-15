@@ -1,0 +1,9 @@
+.btn-login-action {
+  width: 150px;
+}
+
+.custom-control-label {
+  &:hover {
+    cursor: pointer;
+  }
+}

@@ -21,8 +21,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FormsModule,
-    ReactiveFormsModule,
+    FormsModule, ReactiveFormsModule,
 
     CalendarModule.forRoot({
       provide: DateAdapter,

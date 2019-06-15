@@ -1,4 +1,4 @@
-import { Component, OnInit, ɵConsole } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -19,8 +19,8 @@ export class LoginPageComponent implements OnInit {
   ) {
     this.loginForm = this.formBuilder.group(
       {
-        username: ['', [Validators.required, Validators.email]],
-        password: ['', Validators.required],
+        username: ['admin@gudpost.net', [Validators.required, Validators.email]],
+        password: ['admingudpost123', Validators.required],
         rememberMe: [''],
       }
     );
@@ -35,16 +35,33 @@ export class LoginPageComponent implements OnInit {
   }
 
   submit() {
+    if (this.isFormValid() && this.isValidUser()) {
+      this.router.navigate(['/home']);
+    }
+  }
+
+  isValidUser(): boolean {
+    const validUser = {
+      username: 'admin@gudpost.net',
+      password: 'admingudpost123'
+    };
+    if (validUser.username !== this.loginForm.value.username
+      || validUser.password !== this.loginForm.value.password) {
+      this.hasErrors = true;
+      return false;
+    }
+    return true;
+  }
+
+  isFormValid(): boolean {
     if (this.loginForm.invalid) {
       const controls = this.loginForm.controls;
       Object.keys(controls)
         .forEach(controlName => controls[controlName].markAsTouched());
       this.hasErrors = true;
-      return;
+      return false;
     }
-
-    const loginUser = this.loginForm.value;
-    this.router.navigate(['/home']);
+    return true;
   }
 
   onDismissAlert() {
