@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ILoginUser } from '../../models/login-user.model';
 
+declare const FB: any;
+
 @Component({
   selector: 'app-login-page',
   templateUrl: './login-page.component.html',
@@ -54,8 +56,14 @@ export class LoginPageComponent {
    * TODO: Login with Facebook
    */
   loginWithFacebook() {
-    alert('Login with Facebook Success');
-    this.router.navigate(['/home']);
+    // alert('Login with Facebook Success');
+    // this.router.navigate(['/home']);
+
+    FB.login((response) => {
+      localStorage.setItem('access_token', response.authResponse.accessToken);
+      console.log(response);
+    });
+
   }
 
 }

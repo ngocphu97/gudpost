@@ -9,7 +9,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 
+  <script src="https://connect.facebook.net/en_US/all.js"></script>
   <script src="https://kit.fontawesome.com/840d73eac5.js"></script>
+
+  <script>
+    FB.init({
+      appId: '933021606869470',
+      status: true,
+      xfbml: true,
+      version: 'v3.2'
+    });
+    var global = global || window;
+
+  </script>
 
   <style type="text/css">
     #splash-screen {
@@ -213,6 +225,8 @@
       </div>
     </splash-screen>
   </app-root>
+
+  <div id="fb-root"></div>
 
 </body>
 
