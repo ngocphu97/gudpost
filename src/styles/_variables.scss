@@ -1,0 +1,10 @@
+@import "~bootstrap/scss/functions";
+@import "./_globla";
+
+// =================== //
+$primary: $gudpost-blue !default;
+$dark: $gudpost-dark-blue !default;
+$enable-rounded: true !default;
+$border-radius: $gudpost-border-radius !default;
+
+@import "~bootstrap/scss/variables";

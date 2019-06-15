@@ -1,0 +1,22 @@
+$gudpost-blue: #556dd3;
+$gudpost-dark-blue: #3c5a9a;
+$gudpost-yellow: #ffe100;
+$gudpost-border-radius: 1rem;
+
+.btn-yellow {
+    background: $gudpost-yellow;
+    border: $gudpost-yellow;
+
+    &:hover {
+        background:  rgba($gudpost-yellow, .75);
+    }
+}
+
+.btn-darker-blue {
+    background: $gudpost-dark-blue;
+    border: $gudpost-dark-blue;
+
+    &:hover {
+        background:  rgba($gudpost-dark-blue, .75);
+    }
+}
