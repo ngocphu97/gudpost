@@ -1,7 +1,17 @@
-form {
-  width: 100%;
+.login-form {
+  width: 500px;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+
+  .btn-login-action {
+    width: 150px;
+  }
+
+  .custom-control-label {
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }

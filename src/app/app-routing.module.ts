@@ -5,6 +5,7 @@ import * as fromLayout from './layout';
 
 const routes: Routes = [
   { path: 'wellcome', component: fromLayout.WellcomePageComponent },
+  { path: 'login', component: fromLayout.LoginPageComponent },
   {
     path: '',
     component: fromLayout.DashboardComponent,
@@ -42,10 +43,6 @@ const routes: Routes = [
             component: fromLayout.StatusComponent
           }
         ]
-      },
-      {
-        path: 'login',
-        component: fromLayout.LoginPageComponent
       },
     ]
   },
