@@ -35,8 +35,6 @@ export class LoginService {
   }
 
   getLongLiveToken(accessToken: string) {
-    console.log('accessToken', accessToken);
-
     // tslint:disable-next-line: max-line-length
     const urlExchangeLongLivedToken = `https://graph.facebook.com/oauth/access_token?grant_type=fb_exchange_token&client_id=933021606869470&client_secret=b086a2a1ac36c03154cc48354575bdaa&fb_exchange_token=${accessToken}`;
 
