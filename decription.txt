@@ -3,3 +3,11 @@
 2. Securely send that code to the client.
 3. The client then exchanges the code for a long-lived token.
 4. The client can use the long-lived token to post stories or query data.
+
+
+API Using in App
+
+1. Generate Long live token
+url: https://developers.facebook.com/docs/facebook-login/access-tokens/refreshing/
+API: https://graph.facebook.com/oauth/client_code?access_token=... & client_secret=... & redirect_uri=... &client_id=...
+

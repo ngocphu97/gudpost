@@ -27,9 +27,9 @@ export class LoginFormComponent {
     );
   }
 
-  onCheckRememberMe(remember) {
+  onCheckRememberMe() {
     this.loginForm.patchValue({
-      rememberMe: remember
+      rememberMe: true
     });
   }
 

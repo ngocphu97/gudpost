@@ -54,7 +54,7 @@ export class LoginPageComponent {
     this.hasErrors = undefined;
   }
 
-  loginWithFacebook() {
+  loginWithFacebook(e) {
     this.loginService.loginFacebook().pipe()
       .subscribe((response: any) => {
         alert('Your token will exprise in ' + response.expiresIn);
