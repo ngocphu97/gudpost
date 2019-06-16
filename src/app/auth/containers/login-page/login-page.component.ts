@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+
 import { ILoginUser } from '../../models/login-user.model';
+import { LoginService } from '../../services/login.service';
 
 declare const FB: any;
 
@@ -17,7 +19,8 @@ export class LoginPageComponent {
 
   constructor(
     private router: Router,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private loginService: LoginService
   ) {
     this.loginForm = this.formBuilder.group(
       {
@@ -29,7 +32,6 @@ export class LoginPageComponent {
   }
 
   submit(user: ILoginUser) {
-    console.log(user);
     if (this.isValidUser(user)) {
       this.router.navigate(['/home']);
     }
@@ -52,18 +54,16 @@ export class LoginPageComponent {
     this.hasErrors = undefined;
   }
 
-  /**
-   * TODO: Login with Facebook
-   */
   loginWithFacebook() {
-    // alert('Login with Facebook Success');
-    // this.router.navigate(['/home']);
+    this.loginService.loginFacebook().pipe()
+      .subscribe((response: any) => {
+        alert('Your token will exprise in ' + response.expiresIn);
+        // this.router.navigate(['/home']);
+      });
+  }
 
-    FB.login((response) => {
-      localStorage.setItem('access_token', response.authResponse.accessToken);
-      console.log(response);
-    });
-
+  logout() {
+    this.loginService.logOutFacebook().subscribe(res => console.log(res));
   }
 
 }

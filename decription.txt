@@ -1,0 +1,5 @@
+1. Make a call to Facebook's server from your server using a valid and current long-lived token to generate a code. 
+(This assumes you've already obtained a long-lived token via Facebook Login. If the token you're using is invalid or expired, you'll have to obtain a new one by making the person using your app log in again.)
+2. Securely send that code to the client.
+3. The client then exchanges the code for a long-lived token.
+4. The client can use the long-lived token to post stories or query data.

@@ -8,19 +8,24 @@
     </button>
   </div>
 
-  <div class=" d-flex justify-content-center mb-4">
+  <div class="d-flex justify-content-center mb-4">
     <img src="assets/logo/GUDPOST-2.png" class="img-fluid w-75" alt="">
   </div>
 
   <app-login-form 
-  (loginWithFacebook)="loginWithFacebook($event)"
-  (loginUser)="submit($event)" 
-  (rememberMe)="onCheckRememberMe($event)"></app-login-form>
+    (loginWithFacebook)="loginWithFacebook($event)"
+    (loginUser)="submit($event)" 
+    (rememberMe)="onCheckRememberMe($event)">
+  </app-login-form>
 
   <hr>
 
   <div class="text-center">
     <button class="btn btn-light text-secondary">Forgot password</button>
+  </div>
+
+  <div class="text-center">
+    <button class="btn btn-secondary text-secondary" (click)="logout()">Log out</button>
   </div>
 
 </div>
