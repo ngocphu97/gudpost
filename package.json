@@ -3,12 +3,13 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "concurrently --kill-others \"ng serve\" \"npm run mock:server\"",
+    "start": "concurrently --kill-others \"ng serve --proxy-config proxy.config.json\" \"npm run mock:server\"",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "mock:server": "json-server --watch db.json"
+    "mock:server": "json-server --watch db.json",
+    "dev": "lite-server --baseDir=\"gudpost/dist\""
   },
   "private": true,
   "dependencies": {

@@ -66,4 +66,8 @@ export class LoginPageComponent {
   onDismissAlert() {
     this.hasErrors = undefined;
   }
+
+  testJsonServer() {
+    this.loginService.testJsonServer();
+  }
 }

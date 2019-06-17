@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
+import { environment } from '../../../environments/environment';
 
 declare const FB: any;
 
@@ -42,5 +43,9 @@ export class LoginService {
         observer.next(response);
       });
     });
+  }
+
+  testJsonServer() {
+    this.http.get(`${environment.mockServerURL}/posts`).subscribe(d => console.log(d));
   }
 }
