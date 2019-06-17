@@ -50,20 +50,20 @@ export class LoginPageComponent {
     return true;
   }
 
-  onDismissAlert() {
-    this.hasErrors = undefined;
-  }
-
-  loginWithFacebook(e) {
-    this.loginService.loginFacebook().pipe()
-      .subscribe((response: any) => {
-        alert('Your token will exprise in ' + response.expiresIn);
-        // this.router.navigate(['/home']);
-      });
+  loginWithFacebook(loginSignal: boolean) {
+    if (loginSignal) {
+      this.loginService.loginFacebook().pipe()
+        .subscribe(() => {
+          this.router.navigate(['/home']);
+        });
+    }
   }
 
   logout() {
     this.loginService.logOutFacebook().subscribe(res => console.log(res));
   }
 
+  onDismissAlert() {
+    this.hasErrors = undefined;
+  }
 }
