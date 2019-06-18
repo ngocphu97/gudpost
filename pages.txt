@@ -1,0 +1,80 @@
+====== MODULEs ===================
+
+note: each one is module and inside is componets
+
+1. auth
+    login
+    sign-up
+    forget-password
+
+2. dashboard (core layout)
+    (this page will navigate to)
+        user
+        members
+        projects
+
+    (have 2 buttons)
+        publish now
+        add project
+
+    (include)
+        daily status
+            post-schedule
+            success-publish
+            error
+
+        top project
+            thumbnail
+            project-name
+                total-fans
+                fan-increase
+                post-send
+                engagement
+
+3. user 
+    user-profile
+
+4. members (only for admin)
+    member-list
+    add-member
+
+5. projects 
+    project-list
+    project-detail
+    add-project
+
+6. content 
+    content-plan-month
+    content-plan-week
+    status
+    publish-content
+    schedule-content
+
+7. analytics
+    content-analytics
+    page-analytics
+
+======= URLs ==================
+
+* gudpost/dashboard
+
+* gudpost/auth/login
+* gudpost/auth/signup
+* gudpost/auth/forget-password
+
+* gudpost/user/:userId/profile
+
+* gudpost/members
+* gudpost/members/add
+
+* gudpost/project/:userId/project-list
+* gudpost/project/:userId/:projectId
+* gudpost/project/:userId/add-project
+ 
+* gudpost/content/:userId/content-plan - (will include 2 pages: content-plan-month, content-plan-week)
+* gudpost/content/:userId/status - (will include success-post, schedule-post, error-post)
+* gudpost/content/:userId/publish-content - (will include: publish-now, schedule-content)
+ 
+* gudpost/analytics/:userId - (show the list of page include in user)
+* gudpost/analytics/:userId/:pageId - (show the analytics detail of page)
+
