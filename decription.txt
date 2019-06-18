@@ -44,7 +44,7 @@
         project-detail
         add-project
 
-    6. content 
+    6. contents
         content-plan-month
         content-plan-week
         status
@@ -72,13 +72,12 @@
     * gudpost/project/:userId/:projectId
     * gudpost/project/:userId/add-project
     
-    * gudpost/content/:userId/content-plan - (will include 2 pages: content-plan-month, content-plan-week)
-    * gudpost/content/:userId/status - (will include success-post, schedule-post, error-post)
-    * gudpost/content/:userId/publish-content - (will include: publish-now, schedule-content)
+    * gudpost/contents/:userId/content-plan - (will include 2 pages: content-plan-month, content-plan-week)
+    * gudpost/contents/:userId/status - (will include success-post, schedule-post, error-post)
+    * gudpost/contents/:userId/publish-content - (will include: publish-now, schedule-content)
     
     * gudpost/analytics/:userId - (show the list of page include in user)
     * gudpost/analytics/:userId/:pageId - (show the analytics detail of page)
-
 
 ====== PAGEs==================
 
@@ -101,12 +100,12 @@
         project-detail
         add-project
 
-    content 
+    contents
         content-plan-month
         content-plan-week
         status
-        publish-content
-        schedule-content
+        publish-post
+        schedule-post
 
     analytics
         content-analytics
