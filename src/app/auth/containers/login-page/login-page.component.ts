@@ -35,7 +35,9 @@ export class LoginPageComponent {
 
   submit(user: ILoginUser): void {
     this.isValidUser(user).subscribe(res => {
-      if (res) {
+      if (!res) {
+        this.hasErrors = true;
+      } else {
         this.router.navigate(['/home']);
       }
     });
@@ -45,6 +47,7 @@ export class LoginPageComponent {
     return this.loginService.getAllUsers().pipe(
       map(users => {
         let isValid = false;
+        console.log(users);
         users.some(user => {
           if (user.email === loginUser.username && user.password === loginUser.password) {
             isValid = true;

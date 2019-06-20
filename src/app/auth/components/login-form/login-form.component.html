@@ -13,18 +13,19 @@
 
   <div class="form-group">
     <label for="inputGudpostPassword">Password</label>
-    <input #inputGudpostPassword type="password" class="form-control" id="inputGudpostPassword" placeholder="Enter Password ..."
-      formControlName="password" required>
+    <input #inputGudpostPassword type="password" class="form-control" id="inputGudpostPassword"
+      placeholder="Enter Password ..." formControlName="password" required>
   </div>
 
-  <div class="form-group text-right clearfix custom-control custom-checkbox" (click)="onCheckRememberMe()">
-    <input type="checkbox" class="custom-control-input" id="customCheck1" formControlName="rememberMe" >
-    <label class="custom-control-label" for="customCheck1">Remember me</label>
+  <div class="form-group text-right clearfix custom-control custom-checkbox">
+    <input type="checkbox" class="custom-control-input" id="checkRememberMe" formControlName="rememberMe">
+    <label class="custom-control-label" for="checkRememberMe">Remember me</label>
   </div>
 
   <div class="form-group d-flex justify-content-between">
     <button class="btn btn-primary  btn-login-action mr-2">Sign Up</button>
-    <button type="submit" class="btn btn-primary btn-yellow btn-login-action  mr-2">Login</button>
+    <button [class.disabled]="loginForm.invalid" [disabled]="loginForm.invalid" type="submit"
+      class="btn btn-primary btn-yellow btn-login-action mr-2">Login</button>
     <button class="btn btn-primary btn-darker-blue btn-login-action" type="button" (click)="loginFacebook()">
       <i class="fab fa-facebook-f"></i>
     </button>

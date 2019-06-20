@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
 import { ILoginUser } from '../../models/login-user.model';
 
 @Component({
@@ -11,6 +12,7 @@ export class LoginFormComponent {
 
   loginForm: FormGroup;
   hasErrors = false;
+
   @Output() rememberMe = new EventEmitter(false);
   @Output() loginUser = new EventEmitter();
   @Output() loginWithFacebook = new EventEmitter(false);
@@ -20,17 +22,11 @@ export class LoginFormComponent {
   ) {
     this.loginForm = this.formBuilder.group(
       {
-        username: ['admin@gudpost.net', [Validators.required, Validators.email]],
-        password: ['admingudpost123', Validators.required],
+        username: ['', [Validators.required, Validators.email]],
+        password: ['', Validators.required],
         rememberMe: [false],
       }
     );
-  }
-
-  onCheckRememberMe() {
-    this.loginForm.patchValue({
-      rememberMe: true
-    });
   }
 
   isFieldInvalid(fieldName: string): boolean {
@@ -41,8 +37,7 @@ export class LoginFormComponent {
   isFormValid() {
     if (this.loginForm.invalid) {
       const controls = this.loginForm.controls;
-      Object.keys(controls)
-        .forEach(controlName => controls[controlName].markAsTouched());
+      Object.keys(controls).forEach(controlName => controls[controlName].markAsTouched());
       this.hasErrors = true;
       return false;
     }
@@ -52,13 +47,11 @@ export class LoginFormComponent {
 
   submit() {
     if (this.isFormValid()) {
-
       const user: ILoginUser = {
         username: this.loginForm.value.username,
         password: this.loginForm.value.password,
         rememberMe: this.loginForm.value.rememberMe
       };
-
       this.loginUser.emit(user);
     }
   }
