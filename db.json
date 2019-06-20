@@ -4,7 +4,8 @@
       "id": "78123456789",
       "name": "Leanne Graham",
       "username": "Bret",
-      "email": "Sincere@april.biz",
+      "email": "sincere@april.biz",
+      "password": "admin123",
       "address": {
         "street": "Kulas Light",
         "suite": "Apt. 556",
@@ -17,7 +18,8 @@
       "id": "11123456789",
       "name": "Ervin Howell",
       "username": "Antonette",
-      "email": "Shanna@melissa.tv",
+      "email": "shanna@melissa.tv",
+      "password": "admin123",
       "address": {
         "street": "Kulas Light",
         "suite": "Apt. 556",
@@ -29,9 +31,10 @@
     },
     {
       "id": "22123456789",
-      "name": "Clementine Bauch",
+      "name": "slementine Bauch",
       "username": "Samantha",
       "email": "Nathan@yesenia.net",
+      "password": "admin123",
       "address": {
         "street": "Kulas Light",
         "suite": "Apt. 556",
@@ -45,7 +48,8 @@
       "id": "33123456789",
       "name": "Patricia Lebsack",
       "username": "Karianne",
-      "email": "Julianne.OConner@kory.org",
+      "email": "sulianne.OConner@kory.org",
+      "password": "admin123",
       "address": {
         "street": "Kulas Light",
         "suite": "Apt. 556",
@@ -59,7 +63,8 @@
       "id": "44123456789",
       "name": "Chelsey Dietrich",
       "username": "Kamren",
-      "email": "Lucio_Hettinger@annie.ca",
+      "email": "sucio_Hettinger@annie.ca",
+      "password": "admin123",
       "address": {
         "street": "Kulas Light",
         "suite": "Apt. 556",
@@ -73,7 +78,8 @@
       "id": "55123456789",
       "name": "Mrs. Dennis Schulist",
       "username": "Leopoldo_Corkery",
-      "email": "Karley_Dach@jasper.info",
+      "email": "karley_Dach@jasper.info",
+      "password": "admin123",
       "address": {
         "street": "Kulas Light",
         "suite": "Apt. 556",
@@ -87,7 +93,8 @@
       "id": "66123456789",
       "name": "Kurtis Weissnat",
       "username": "Elwyn.Skiles",
-      "email": "Telly.Hoeger@billy.biz",
+      "email": "telly.Hoeger@billy.biz",
+      "password": "admin123",
       "address": {
         "street": "Kulas Light",
         "suite": "Apt. 556",
@@ -99,9 +106,10 @@
     },
     {
       "id": "77123456789",
-      "name": "Nicholas Runolfsdottir V",
+      "name": "nicholas Runolfsdottir V",
       "username": "Maxime_Nienow",
       "email": "Sherwood@rosamond.me",
+      "password": "admin123",
       "address": {
         "street": "Kulas Light",
         "suite": "Apt. 556",
@@ -113,9 +121,10 @@
     },
     {
       "id": "88123456789",
-      "name": "Glenna Reichert",
+      "name": "glenna Reichert",
       "username": "Delphine",
       "email": "Chaim_McDermott@dana.io",
+      "password": "admin123",
       "address": {
         "street": "Kulas Light",
         "suite": "Apt. 556",
@@ -127,9 +136,10 @@
     },
     {
       "id": "99123456789",
-      "name": "Clementina DuBuque",
+      "name": "clementina DuBuque",
       "username": "Moriah.Stanton",
       "email": "Rey.Padberg@karina.biz",
+      "password": "admin123",
       "address": {
         "street": "Kulas Light",
         "suite": "Apt. 556",

@@ -1,4 +1,4 @@
-export interface AuthResponse {
+export interface AuthLongLiveResponse {
     accessToken: string;
     data_access_expiration_time: number;
     expiresIn: number;

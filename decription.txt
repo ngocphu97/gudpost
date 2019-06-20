@@ -29,7 +29,7 @@
                 project-name
                     total-fans
                     fan-increase
-                    post-send
+                    reach
                     engagement
 
     3. user 

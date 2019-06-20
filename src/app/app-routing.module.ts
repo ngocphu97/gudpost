@@ -1,17 +1,23 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
+import { Routes, RouterModule, PreloadingStrategy, PreloadAllModules } from '@angular/router';
 
 import * as fromLayout from './layout';
+import { AuthGuard } from './auth/auth.guard';
 
 const routes: Routes = [
-  { path: 'wellcome', component: fromLayout.WellcomePageComponent },
   {
     path: 'login',
-    loadChildren:  './auth/auth.module#AuthModule'
+    loadChildren: './auth/auth.module#AuthModule'
+  },
+  {
+    path: 'wellcome',
+    component: fromLayout.WellcomePageComponent,
+    canActivate: [AuthGuard],
   },
   {
     path: '',
     component: fromLayout.DashboardComponent,
+    canActivate: [AuthGuard],
     children: [
       {
         path: 'home',

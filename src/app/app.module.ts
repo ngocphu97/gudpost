@@ -32,7 +32,8 @@ import { HttpClientModule } from '@angular/common/http';
     ChartsModule
 
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

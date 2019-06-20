@@ -4,6 +4,8 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 import { ILoginUser } from '../../models/login-user.model';
 import { LoginService } from '../../services/login.service';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 declare const FB: any;
 
@@ -31,26 +33,30 @@ export class LoginPageComponent {
     );
   }
 
-  submit(user: ILoginUser) {
-    if (this.isValidUser(user)) {
-      this.router.navigate(['/home']);
-    }
+  submit(user: ILoginUser): void {
+    this.isValidUser(user).subscribe(res => {
+      if (res) {
+        this.router.navigate(['/home']);
+      }
+    });
   }
 
-  isValidUser(user: ILoginUser): boolean {
-    const validUser = {
-      username: 'admin@gudpost.net',
-      password: 'admingudpost123'
-    };
-    if (validUser.username !== user.username
-      || validUser.password !== user.password) {
-      this.hasErrors = true;
-      return false;
-    }
-    return true;
+  isValidUser(loginUser: ILoginUser): Observable<boolean> {
+    return this.loginService.getAllUsers().pipe(
+      map(users => {
+        let isValid = false;
+        users.some(user => {
+          if (user.email === loginUser.username && user.password === loginUser.password) {
+            isValid = true;
+          }
+        });
+        return isValid;
+      })
+    );
   }
 
-  loginWithFacebook(loginSignal: boolean) {
+
+  loginWithFacebook(loginSignal: boolean): void {
     if (loginSignal) {
       this.loginService.loginFacebook().pipe()
         .subscribe(() => {
@@ -59,15 +65,7 @@ export class LoginPageComponent {
     }
   }
 
-  logout() {
-    this.loginService.logOutFacebook().subscribe(res => console.log(res));
-  }
-
-  onDismissAlert() {
+  dismissAlert(): void {
     this.hasErrors = undefined;
-  }
-
-  testJsonServer() {
-    this.loginService.testJsonServer();
   }
 }
